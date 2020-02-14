@@ -18,5 +18,15 @@ declare module 'web-router' {
     readonly protocol: string;
     readonly origin: string;
   }
+  interface LinkProps
+    extends Omit<
+      React.DetailedHTMLProps<
+        React.AnchorHTMLAttributes<HTMLAnchorElement>,
+        HTMLAnchorElement
+      >,
+      'href'
+    > {
+    to: string;
+  }
   type Callback = (history: History, location: Location) => void;
 }
