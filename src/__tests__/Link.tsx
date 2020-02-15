@@ -1,7 +1,6 @@
 import React from 'react';
-import Router from '../Router';
 import { render } from '@testing-library/react';
-import Link from '../Link';
+import { Router, Link } from 'web-router';
 
 it('should works when link clicked', () => {
   function App() {

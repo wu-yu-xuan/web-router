@@ -28,5 +28,14 @@ declare module 'web-router' {
     > {
     to: string;
   }
+  function Link(props: LinkProps): React.ReactElement;
+  interface RedirectProps {
+    to: string;
+    push?: boolean;
+  }
+  function Redirect(props: RedirectProps): React.ReactElement;
+  function Router(props: React.PropsWithChildren<{}>): React.ReactElement;
   type Callback = (history: History, location: Location) => void;
+  function useHistory<State = {}>(): History<State>;
+  function useLocation(): Location;
 }

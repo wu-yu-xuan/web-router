@@ -3,6 +3,10 @@ import createHistory from './createHistory';
 import RouterContext from './RouterContext';
 
 const { listen, ...initRouter } = createHistory();
+listen((history, location) => {
+  initRouter.history = history;
+  initRouter.location = location;
+});
 
 export default function Router({ children }: React.PropsWithChildren<{}>) {
   const [router, setRouter] = React.useState(initRouter);

@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "description": "",
   "main": "src/index.ts",
+  "module": "src/index.ts",
   "scripts": {
     "test": "jest --coverage"
   },
   "author": "wu-yu-xuan",
   "license": "WTFPL",
+  "typings": "index.d.ts",
   "devDependencies": {
     "@testing-library/react": "^9.4.0",
     "@types/jest": "^25.1.2",

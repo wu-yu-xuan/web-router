@@ -1,8 +1,6 @@
-import useHistory from '../useHistory';
-import useLocation from '../useLocation';
 import React from 'react';
-import Router from '../Router';
 import { render } from '@testing-library/react';
+import { useHistory, useLocation, Router } from 'web-router';
 
 it('is just test', () => {
   function Child() {
