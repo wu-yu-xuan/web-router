@@ -38,4 +38,11 @@ declare module 'web-router' {
   type Callback = (history: History, location: Location) => void;
   function useHistory<State = {}>(): History<State>;
   function useLocation(): Location;
+  function useParams<T extends Params = Params>(): T;
+  type RouteProps = React.PropsWithChildren<{ path: string }>;
+  function Route(props: RouteProps): React.ReactElement;
+  interface Params {
+    [key: string]: string;
+  }
+  function Switch(): React.ReactElement;
 }

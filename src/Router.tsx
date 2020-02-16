@@ -23,6 +23,8 @@ export default function Router({ children }: React.PropsWithChildren<{}>) {
   }
   React.useEffect(() => unlisten.current, []);
   return (
-    <RouterContext.Provider value={router}>{children}</RouterContext.Provider>
+    <RouterContext.Provider value={{ ...router, params: {} }}>
+      {children}
+    </RouterContext.Provider>
   );
 }
