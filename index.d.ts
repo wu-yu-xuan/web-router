@@ -44,5 +44,5 @@ declare module 'web-router' {
   interface Params {
     [key: string]: string;
   }
-  function Switch(): React.ReactElement;
+  function Switch(props: React.PropsWithChildren<{}>): React.ReactElement;
 }

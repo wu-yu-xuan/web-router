@@ -15,16 +15,19 @@ function accessCache(path: string) {
     return cache[path];
   }
   const keys: Key[] = [];
-  const regexp = pathToRegexp(path, keys);
+  const regexp = pathToRegexp(path, keys, { end: false });
   return (cache[path] = {
     keys,
     regexp
   });
 }
 
-export default function matchRoute(path: string): Params | null {
+export default function matchRoute(
+  path: string,
+  pathname?: string
+): Params | null {
   const { regexp, keys } = accessCache(path);
-  const match = regexp.exec(window.location.pathname);
+  const match = regexp.exec(pathname ?? window.location.pathname);
   if (!match) {
     return match;
   }

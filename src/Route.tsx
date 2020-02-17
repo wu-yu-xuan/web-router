@@ -4,8 +4,8 @@ import RouterContext from './RouterContext';
 import React from 'react';
 
 export default function Route({ children, path }: RouteProps) {
-  const params = matchRoute(path);
   const context = React.useContext(RouterContext);
+  const params = matchRoute(path, context.location?.pathname);
   if (!params) {
     return null;
   }
