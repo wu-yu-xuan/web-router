@@ -1,4 +1,3 @@
-import 'react/experimental';
 import React, { useState, useEffect, useTransition, Suspense } from 'react';
 import {
   Route,
