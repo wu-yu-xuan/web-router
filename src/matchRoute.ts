@@ -29,7 +29,7 @@ export default function matchRoute(
   const { regexp, keys } = accessCache(path);
   const match = regexp.exec(pathname ?? window.location.pathname);
   if (!match) {
-    return match;
+    return null;
   }
   const [, ...values] = match;
   return keys.reduce<Params>((memo, key, index) => {
