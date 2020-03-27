@@ -29,12 +29,14 @@ break change: `BrowserRouter` 更名为 `Router`
 if you love react concurrent mode, you can:
 
 ```bash
-yarn add https://github.com/wu-yu-xuan/web-router.git#v0.2.0
+yarn add https://github.com/wu-yu-xuan/web-router.git#v0.2.1
 ```
 
 and rename `Switch` into `TransitionSwitch`
 
 it will use `useTransition` to switch from pages
+
+经过大量尝试, 建议把 `timeoutMs` 设为大于 5000 的值, 否则好像没有效果, 感觉应该是 react 的 bug
 
 ## Who Is Using It
 
