@@ -11,7 +11,7 @@
 
 ```bash
 yarn remove react-router react-router-dom @types/react-router @types/react-router-dom
-yarn add https://github.com/wu-yu-xuan/web-router.git
+yarn add https://github.com/wu-yu-xuan/web-router.git#v0.1.0
 ```
 
 把 `react-router` | `react-router-dom` 全局查找替换成 `web-router`
@@ -21,6 +21,20 @@ break change: `BrowserRouter` 更名为 `Router`
 仅实现了部分常用功能, 如果不能运行, 可以参考本项目的[类型定义](https://github.com/wu-yu-xuan/web-router/blob/master/index.d.ts)迁移至类似功能
 
 或欢迎提出 issue 和 pr!
+
+## Concurrent Mode(Experimental)
+
+**use at you own risk!!!**
+
+if you love react concurrent mode, you can:
+
+```bash
+yarn add https://github.com/wu-yu-xuan/web-router.git#v0.2.0
+```
+
+and rename `Switch` into `TransitionSwitch`
+
+it will use `useTransition` to switch from pages
 
 ## Who Is Using It
 

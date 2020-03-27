@@ -45,4 +45,12 @@ declare module 'web-router' {
     [key: string]: string;
   }
   function Switch(props: React.PropsWithChildren<{}>): React.ReactElement;
+  interface FixedProgressProps {
+    show: boolean;
+  }
+  function FixedProgress({ show }: FixedProgressProps): React.ReactElement;
+  type TransitionSwitchProps = Partial<
+    React.SuspenseProps & React.TimeoutConfig
+  >;
+  function TransitionSwitch(props: TransitionSwitchProps): React.ReactElement;
 }

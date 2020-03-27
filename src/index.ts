@@ -6,3 +6,5 @@ export { default as Route } from './Route';
 export { default as Link } from './Link';
 export { default as Redirect } from './Redirect';
 export { default as Switch } from './Switch';
+export { default as FixedProgress } from './FixedProgress';
+export { default as TransitionSwitch } from './TransitionSwitch';
